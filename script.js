@@ -37,3 +37,17 @@ function removeSmallest(numbers) {
 //Input: [1,2,3,4,5], output = [2,3,4,5]
 //Input: [5,3,2,1,4], output = [5,3,2,4]
 //Input: [2,2,1,2,1], output = [2,2,2,1]
+
+//Task 3. Give me the amount of people who are in the bus after last stop.
+
+// function busStop(people){
+//  }
+
+function busStop(people) {
+  for (let i = 1; i < people.length; i++) {
+    people[i][1] = people[i][1] * -1;
+  }
+  return people.flat().reduce((sum, value) => sum + value);
+}
+// console.log(busStop([[15,0],[5,1],[5,1]]))
+// console.log(busStop1([[15,0],[5,1],[5,1]]))
