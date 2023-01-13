@@ -57,17 +57,17 @@ function busStop(people) {
 // The input is a list of the integers A, B, C, D, AxB, BxC, CxD, DxA in some order.
 // Your task is to return the value of D.
 
-function alphabet(ns) {
-  const sortedArr = ns.sort((a, b) => {
-    return a - b;
-  });
+// function alphabet(ns) {
+//   const sortedArr = ns.sort((a, b) => {
+//     return a - b;
+//   });
 
-  if (sortedArr[2] === sortedArr[0] * sortedArr[1]) {
-    return sortedArr[7] / sortedArr[3];
-  } else {
-    return sortedArr[7] / sortedArr[2];
-  }
-}
+//   if (sortedArr[2] === sortedArr[0] * sortedArr[1]) {
+//     return sortedArr[7] / sortedArr[3];
+//   } else {
+//     return sortedArr[7] / sortedArr[2];
+//   }
+// }
 
 // alphabet([2, 3, 4, 1, 12, 6, 2, 4]);
 // alphabet([2, 6, 7, 3, 14, 35, 15, 5]);
@@ -75,3 +75,17 @@ function alphabet(ns) {
 // alphabet([2, 6, 18, 3, 6, 7, 42, 14]);
 // alphabet([7, 96, 8, 240, 12, 140, 20, 56]);
 // alphabet([20, 30, 6, 7, 4, 42, 28, 5]);
+
+// Task 5
+// Given an array of integers , Find the minimum sum which is obtained from summing each Two integers product .
+
+function minSum(arr) {
+  let sorted = arr.sort((a, b) => a - b);
+  let a = 0;
+  for (let i = 0; i < sorted.length / 2; i++) {
+    a += sorted[i] * sorted[sorted.length - i - 1];
+  }
+  return a;
+}
+
+console.log(minSum([1, 2, 3, 4]));
