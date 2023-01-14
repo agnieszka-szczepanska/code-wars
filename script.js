@@ -57,17 +57,17 @@ function busStop(people) {
 // The input is a list of the integers A, B, C, D, AxB, BxC, CxD, DxA in some order.
 // Your task is to return the value of D.
 
-// function alphabet(ns) {
-//   const sortedArr = ns.sort((a, b) => {
-//     return a - b;
-//   });
+function alphabet(ns) {
+  const sortedArr = ns.sort((a, b) => {
+    return a - b;
+  });
 
-//   if (sortedArr[2] === sortedArr[0] * sortedArr[1]) {
-//     return sortedArr[7] / sortedArr[3];
-//   } else {
-//     return sortedArr[7] / sortedArr[2];
-//   }
-// }
+  if (sortedArr[2] === sortedArr[0] * sortedArr[1]) {
+    return sortedArr[7] / sortedArr[3];
+  } else {
+    return sortedArr[7] / sortedArr[2];
+  }
+}
 
 // alphabet([2, 3, 4, 1, 12, 6, 2, 4]);
 // alphabet([2, 6, 7, 3, 14, 35, 15, 5]);
@@ -89,3 +89,18 @@ function minSum(arr) {
 }
 
 console.log(minSum([1, 2, 3, 4]));
+
+//Task 6
+//Given an array of integers, remove the smallest value. Do not mutate the original array/list. If there are multiple elements with the same value, remove the one with a lower index. If you get an empty array/list, return an empty array/list. Don't change the order of the elements that are left.
+
+function removeSmallest(numbers) {
+  if (numbers === []) {
+    return numbers;
+  } else {
+    const a = numbers.indexOf(Math.min(...numbers));
+    let b = numbers.slice(0, a);
+    let c = numbers.slice(a + 1, numbers.length);
+    return b.concat(c);
+  }
+}
+// console.log(removeSmallest([5, 3, 2, 1, 4]));
