@@ -135,3 +135,12 @@ function longest(s1, s2) {
 
 // console.log(longest("aretheyhere", "yestheyarehere"));
 // console.log(longest("aabbccdd", "aabbccddeehijf"));
+
+// Task 8
+// Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+
+function invert(array) {
+  return array.map((element) => element * -1);
+}
+
+// console.log(invert([1,2,3,4,5]))
