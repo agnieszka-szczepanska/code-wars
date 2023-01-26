@@ -178,3 +178,17 @@ function createPhoneNumber(numbers) {
 }
 
 createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]); // => returns "(123) 456-7890"
+
+// task 12
+// Is it even?
+// In this Kata we are passing a number (n) into a function.
+// Your code will determine if the number passed is even (or not).
+// The function needs to return either a true or false.
+// Numbers may be positive or negative, integers or floats.
+// Floats with decimal part non equal to zero are considered UNeven for this kata.
+
+function testEven(n) {
+  return n % 2 === 0;
+}
+
+testEven(1);
