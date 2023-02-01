@@ -202,3 +202,17 @@ function stringToArray(string) {
 }
 
 // stringToArray("I love arrays they are my favorite");
+
+//task 14
+//Given an array of integers , Find the minimum sum which is obtained from summing each Two integers product .
+
+function minSum(arr) {
+  let sorted = arr.sort((a, b) => a - b);
+  let a = 0;
+  for (let i = 0; i < sorted.length / 2; i++) {
+    a += sorted[i] * sorted[sorted.length - i - 1];
+  }
+  return a;
+}
+
+console.log(minSum([1, 2, 3, 4]));
