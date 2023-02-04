@@ -245,3 +245,17 @@ function smallestIntegerFinder(array) {
 }
 
 // console.log(smallestIntegerFinder([5, 6, 1, 2, 3, 4, 10, 100, 11, 20, 30]));
+
+//task 17
+//Make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+
+function descendingOrder(n) {
+  return parseInt(
+    n
+      .toString()
+      .split("")
+      .sort((a, b) => b - a)
+      .join("")
+  );
+}
+// console.log(descendingOrder(1234));
