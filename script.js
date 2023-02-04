@@ -232,3 +232,16 @@ function sumMix(x) {
 sumMix([9, 3, "7", "3"]);
 // sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]);
 // sumMix(['3', 6, 6, 0, '5', 8, 5, '6', 2,'0']);
+
+//task 16
+//Given an array of integers your solution should find the smallest integer.
+
+function smallestIntegerFinder(array) {
+  let a = array.sort((a, b) => {
+    return a - b;
+  });
+  //   return a[0];
+  return a;
+}
+
+// console.log(smallestIntegerFinder([5, 6, 1, 2, 3, 4, 10, 100, 11, 20, 30]));
