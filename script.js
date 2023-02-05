@@ -269,17 +269,18 @@ function descendingOrder(n) {
 // If the string is smaller or equal than the maximum string length, then simply return the string with no trimming or dots required.
 // e.g. trim("Code Wars is pretty rad", 50) should return "Code Wars is pretty rad"
 
-unction trim(str, size) {
-  
- if (str.length<= size ) {
-    return str    
-  }  else if (size<= 3 ){
-    return str.split("").splice(0,size).concat("...").join("")
-  }  else if    
-    (str.length<= 3 ){
-    return str.split("").splice(0,size).join("")
-  } else {   
-return str.split("").splice(0,size-3).concat("...").join("")
+function trim(str, size) {
+  if (str.length <= size) {
+    return str;
+  } else if (size <= 3) {
+    return str.split("").splice(0, size).concat("...").join("");
+  } else if (str.length <= 3) {
+    return str.split("").splice(0, size).join("");
+  } else {
+    return str
+      .split("")
+      .splice(0, size - 3)
+      .concat("...")
+      .join("");
   }
-
-  }
+}
