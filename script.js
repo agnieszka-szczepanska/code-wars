@@ -276,6 +276,7 @@ function trim(str, size) {
     return str.split("").splice(0, size).concat("...").join("");
   } else if (str.length <= 3) {
     return str.split("").splice(0, size).join("");
+    f;
   } else {
     return str
       .split("")
@@ -283,4 +284,10 @@ function trim(str, size) {
       .concat("...")
       .join("");
   }
+}
+
+//task 19
+//Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+function even_or_odd(number) {
+  return number % 2 ? "Odd" : "Even";
 }
