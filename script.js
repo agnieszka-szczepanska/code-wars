@@ -291,3 +291,18 @@ function trim(str, size) {
 function even_or_odd(number) {
   return number % 2 ? "Odd" : "Even";
 }
+
+// task 20 (homework task1)
+//Stwórz funkcję, która jako argument będzie przyjmować obiekt,
+//stworzy nowy obiekt, w którym zamieni klucze z wartościami
+//i zwróci ten nowo stworzony obiekt.
+//Np. dla obiektu {red: '#FF0000', green: '#00FF00', white: '#FFFFFF'}
+//wynikiem będzie obiekt: {'#FF0000': 'red', '#00FF00': 'green', '#FFFFFF': 'white'}
+const rotateData = (list) => {
+  const result = Object.fromEntries(
+    Object.entries(list).map(([key, val]) => [val, key])
+  );
+  return result;
+};
+
+rotateData({ red: "#FF0000", green: "#00FF00", white: "#FFFFFF" });
